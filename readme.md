@@ -67,7 +67,7 @@ Returns an JSON object with all `That's what she said` jokes :
     "type": "That's what she said",
     "author": "Darryl -> Micheal Scott",
   },
-];
+]
 ```
 
 ## Contributing
