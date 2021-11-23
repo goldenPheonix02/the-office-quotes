@@ -47,25 +47,25 @@ Returns an JSON object with all `That's what she said` jokes :
 ```json
 [
   {
-    quote: "Michael. I can't believe you came.",
-    type: "That's what she said",
-    author: "Dwight -> Micheal Scott",
+    "quote": "Michael. I can't believe you came.",
+    "type": "That's what she said",
+    "author": "Dwight -> Micheal Scott",
   },
   {
-    quote: "Michael, you are making this harder than it has to be.",
-    type: "That's what she said",
-    author: "Gabe -> Micheal Scott",
+    "quote": "Michael, you are making this harder than it has to be.",
+    "type": "That's what she said",
+    "author": "Gabe -> Micheal Scott",
   },
   {
-    quote:
+    "quote":
       "Wow, that is really hard. You really think you can go all day long? Well, you always left me satisfied and smiling, so-",
-    type: "That's what she said",
-    author: "Jim -> Micheal Scott",
+    "type": "That's what she said",
+    "author": "Jim -> Micheal Scott",
   },
   {
-    quote: "You need to get back on top.",
-    type: "That's what she said",
-    author: "Darryl -> Micheal Scott",
+    "quote": "You need to get back on top.",
+    "type": "That's what she said",
+    "author": "Darryl -> Micheal Scott",
   },
 ];
 ```
