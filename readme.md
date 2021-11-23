@@ -4,7 +4,7 @@ because the office is epic
 
 ## Production host
 
-[https://the-office-quotes.herokuapp.com/quotes/random](https://the-office-quotes.herokuapp.com/quotes/random)
+- [https://the-office-quotes.herokuapp.com/quotes/random](https://the-office-quotes.herokuapp.com/quotes/random)
 
 ## APIs
 
@@ -23,6 +23,8 @@ Returns an JSON object with one random quote:
 
 Returns an array with `{number}` quotes e.g. `GET /quotes/2`
 
+- [https://the-office-quotes.herokuapp.com/quotes/2](https://the-office-quotes.herokuapp.com/quotes/2)
+
 ```json
 [
    {
@@ -39,6 +41,8 @@ Returns an array with `{number}` quotes e.g. `GET /quotes/2`
 ### `GET /twss`
 
 Returns an JSON object with all `That's what she said` jokes :
+
+- [https://the-office-quotes.herokuapp.com/twss](https://the-office-quotes.herokuapp.com/twss)
 
 ```json
 [
