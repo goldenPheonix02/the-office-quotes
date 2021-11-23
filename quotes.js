@@ -84,28 +84,26 @@ module.exports = {
             author: "Creed Braton",
         },
 
-
         // <---------------------------------------- TWSS ----------------------------------------------->
         {
             quote: "Michael. I can't believe you came.",
             type: "That's what she said",
-            author: "Dwight -> Micheal Scott"
+            author: "Dwight -> Micheal Scott",
         },
         {
             quote: "Michael, you are making this harder than it has to be.",
             type: "That's what she said",
-            author: "Gabe -> Micheal Scott"
+            author: "Gabe -> Micheal Scott",
         },
         {
             quote: "Wow, that is really hard. You really think you can go all day long? Well, you always left me satisfied and smiling, so-",
             type: "That's what she said",
-            author: "Jim -> Micheal Scott"
+            author: "Jim -> Micheal Scott",
         },
         {
             quote: "You need to get back on top.",
             type: "That's what she said",
-            author: "Darryl -> Micheal Scott"
+            author: "Darryl -> Micheal Scott",
         },
-
     ],
 };
