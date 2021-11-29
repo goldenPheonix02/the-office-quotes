@@ -8,6 +8,29 @@ app.get("/quotes/random", (req, res) => {
     res.json(quotes.quotes[random]);
 });
 
+
+const https = require("https");
+https.get(
+    "https://the-office-quotes.herokuapp.com/quotes/random",
+    (res) => {
+        console.log(res.statusCode);
+        let data = "";
+        res.on("data", (chunk) => {
+            // Data is being received in chunks, we add it to the data variable to save it
+            data += chunk;
+        });
+        res.on("end", () => {
+            // all data has been received, now we can parse it and are done
+            var parsedData = JSON.parse(data);
+            if (res.statusCode === 404) {
+                alert("City Not Found");
+            } else {
+                console.log(parsedData);
+            }
+        });
+    }
+);
+
 app.get("/quotes/:n", (req, res) => {
     var n = req.params.n;
     const len = quotes.quotes.length;
@@ -23,6 +46,9 @@ app.get("/quotes/:n", (req, res) => {
     }
     res.json(array);
 });
+
+
+
 
 app.get("/twss", (req, res) => {
     const arr = qarr.filter(q => q.type == `That's what she said`)
