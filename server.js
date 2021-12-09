@@ -8,9 +8,12 @@ app.get("/quotes/random", (req, res) => {
     res.json(quotes.quotes[random]);
 });
 
-
-app.all("*", (req, res, next) => {
-    res.set("Access-Control-Allow-Origin", "*");
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+    );
     next();
 });
 
