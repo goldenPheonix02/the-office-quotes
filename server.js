@@ -1,20 +1,19 @@
 const app = require("express")();
 const quotes = require("./quotes");
 const qarr = quotes.quotes;
+const cors = require('cors')
 var port = process.env.PORT || 3000;
+
+
+app.use(
+    cors({
+        origin: "*"
+    })
+)
 
 app.get("/quotes/random", (req, res) => {
     const random = Math.floor(Math.random() * quotes.quotes.length);
     res.json(quotes.quotes[random]);
-});
-
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept"
-    );
-    next();
 });
 
 const https = require("https");
