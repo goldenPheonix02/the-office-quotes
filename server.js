@@ -9,6 +9,11 @@ app.get("/quotes/random", (req, res) => {
 });
 
 
+app.all("*", (req, res, next) => {
+    res.set("Access-Control-Allow-Origin", "*");
+    next();
+});
+
 const https = require("https");
 https.get(
     "https://the-office-quotes.herokuapp.com/quotes/random",
