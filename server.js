@@ -77,7 +77,10 @@ app.get("/quotes/random", (req, res) => {
 
 app.get("/all", (req, res) => {
   Quotes.find((err, items) => {
-    if (!err) res.send(items);
+    if (!err) {
+      items = [{ total: items.length }, ...items];
+      res.send(items);
+    }
   });
 });
 
