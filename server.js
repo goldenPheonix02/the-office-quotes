@@ -41,7 +41,7 @@ function addAll(quotes) {
   let all = [];
   Quotes.insertMany(quotes, (err) => {
     if (!err) {
-      console.log("ADDED ALL!");
+      console.log("ADDED ALL");
     }
   });
 }
