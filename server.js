@@ -10,9 +10,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // mongoose.connect("mongodb://localhost:27017/TheOfficeQuotes");
 const password = process.env.PASSWORD;
+const username = process.env.USERNAME;
 
 mongoose.connect(
-  "mongodb+srv://aloneMusk:" +
+  "mongodb+srv://" +
+    username +
+    ":" +
     password +
     "@theofficeapi.if7dr.mongodb.net/?retryWrites=true&w=majority"
 );
@@ -78,6 +81,9 @@ app.get("/quotes/random", (req, res) => {
 app.get("/all", (req, res) => {
   Quotes.find((err, items) => {
     if (!err) {
+      items = items.map((e) => {
+        return {};
+      });
       items = [{ total: items.length }, ...items];
       res.send(items);
     }
