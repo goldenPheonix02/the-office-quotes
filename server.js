@@ -11,7 +11,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // mongoose.connect("mongodb://localhost:27017/TheOfficeQuotes");
 const password = process.env.PASSWORD;
 const username = process.env.UNAME;
-console.log(username, password);
 mongoose.connect(
   "mongodb+srv://" +
     username +
@@ -83,9 +82,12 @@ app.get("/quotes/random", (req, res) => {
 app.get("/all", (req, res) => {
   Quotes.find((err, items) => {
     if (!err) {
-      items = items.map((e) => {
-        return { quote: e.quote, author: e.author };
-      });
+      if (username.length > 5) {
+        items = items.map((e) => {
+          return { quote: e.quote, author: e.author };
+        });
+      }
+
       items = [{ total: items.length }, ...items];
       res.send(items);
     }
